@@ -1,22 +1,32 @@
 import './index.scss'
 
-const ResultBox = () => {
+interface resutBoxProps {
+  wordCount: number,
+  sentenceCount: number,
+  paraCount: number,
+  characterCount: number,
+  
+  
+}
+
+
+const ResultBox = (props: resutBoxProps) => {
   const resultBar = [
     {
       title: 'Words',
-      value: 0,
+      value: props.wordCount,
     },
     {
       title: 'Characters',
-      value: 0,
+      value: props.characterCount,
     },
     {
       title: 'Sentences',
-      value: 0,
+      value: props.sentenceCount,
     },
     {
       title: 'Paragraphs ',
-      value: 0,
+      value: props.paraCount,
     },
     {
       title: 'Pronouns',
